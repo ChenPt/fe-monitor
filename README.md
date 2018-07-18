@@ -42,6 +42,16 @@ Vue.config.errorHandler = function (err, vm, info) {
 }
 ```
 
+Promise报错，`onerror`事件是捕获不到的。
+
+对于Promise的错误，需要在每个Promise后面添加catch来捕获，
+或者监听`unhandledrejection`事件，不过`unhandledrejection`在浏览器的兼容不是很好
+只有PC端`Chrome`和`Safari`支持
+
+如果是对于用户基数大，且宿主环境多样的产品来说，使用`unhandledrejection`不太可行，还是得手动添加`catch`来捕获error
+
+![](https://ws1.sinaimg.cn/large/ad9f1193gy1fte1378u45j20za0llgnw.jpg)
+
 ## 上报错误的完整性（遇到跨域脚本，如何做上报，监控哪些指标）
 
 ### 跨域问题
@@ -77,4 +87,11 @@ Vue.config.errorHandler = function (err, vm, info) {
 因为前端代码文件都是经过打包工具压缩过的，所以在不开启sourcemap的情况下，是定位不到实际发生错误的代码的行列位置
 
 需要上传sourceMap文件，分析sourceMap文件，可以定位具体发生错误的代码。
+
 如果是使用node来做中间层的话，可以将sourcemap文件的解析工作交给中间层，或者直接交给服务端解析.
+
+## TODOLIST
+
+- [ ] 监控JS执行错误
+- [ ] 监控HTTP请求错误
+- [ ] 监控页面加载性能

@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ChenPt/fe-monitor/issues"
   },
-  "homepage": "https://github.com/ChenPt/fe-monitor#readme"
+  "homepage": "https://github.com/ChenPt/fe-monitor#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
