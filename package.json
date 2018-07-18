@@ -1,0 +1,22 @@
+{
+  "name": "cpt-fe-monitor",
+  "version": "0.0.1",
+  "description": "front end monitor demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenPt/fe-monitor.git"
+  },
+  "keywords": [
+    "monitor"
+  ],
+  "author": "ChenPt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChenPt/fe-monitor/issues"
+  },
+  "homepage": "https://github.com/ChenPt/fe-monitor#readme"
+}
