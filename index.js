@@ -1,3 +1,6 @@
+window.addEventListener('error', (err) => {
+  console.log(err)
+})
 const feMonitor = {
   notify (err, info) {
     console.log("我监控到了错误: ", err)
